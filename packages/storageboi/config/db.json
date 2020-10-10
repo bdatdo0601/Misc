@@ -1,0 +1,16 @@
+{
+  "users": {
+    "bdatdo0601": {
+      "hash": "5cef29b133356bbb152c7d1ee1f946f1bf09c32f5dc78a4a3a6b3adc4e93775a$d3cf1eb8",
+      "privileged": true
+    }
+  },
+  "sessions": {
+    "anm+mQUULgtbxQramdwbw7roS/g7MzdSJxypub4nkn3gsxPp": {
+      "privileged": true,
+      "username": "bdatdo0601",
+      "lastSeen": 1601944688313
+    }
+  },
+  "links": {}
+}

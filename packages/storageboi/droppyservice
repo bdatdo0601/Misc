@@ -1,0 +1,6 @@
+#!/sbin/openrc-run
+
+name="droppy"
+description="File Storage Service"
+command="/usr/local/bin/droppy start"
+command_args="--configdir /srv/droppy/config --filesdir /srv/droppy/files --daemon"
