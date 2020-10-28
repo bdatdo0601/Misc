@@ -1,0 +1,7 @@
+#!/sbin/openrc-run
+
+name="wolboi"
+description="WOL Service"
+command="/usr/local/bin/forever start /root/Misc/packages/wolboi/index.js"
+
+
