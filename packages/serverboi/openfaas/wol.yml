@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:30915
+functions:
+  wol:
+    lang: node14
+    handler: ./wol
+    image: bdatdo0601/wol:latest
+
