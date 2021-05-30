@@ -1,0 +1,21 @@
+[Unit]
+Description=MineCraftServerService
+Wants = network-online.target
+After = network.target network-online.target
+
+[Service]
+WorkingDirectory=/home/minecraft/minecraft_server
+User=minecraft
+Group=minecraft
+Restart=on-abnormal
+RuntimeMaxSec=86400
+
+ExecStart=/usr/bin/screen -dmS rlcraftserver start.sh
+
+ExecStop=/usr/bin/screen -p 0 -S rlcraftserver -X eval 'stuff "say GET YOUR ASS OUT BEFORE 5 SECONDS..."\015'
+ExecStop=/bin/sleep 5
+ExecStop=/usr/bin/screen -p 0 -S rlcraftserver -X eval 'stuff "save-all"\015'
+ExecStop=/usr/bin/screen -p 0 -S rlcraftserver -X eval 'stuff "stop"\015'
+
+[Install]
+WantedBy=multi-user.target

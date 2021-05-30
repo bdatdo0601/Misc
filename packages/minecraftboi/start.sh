@@ -1,0 +1,1 @@
+java -Xms7G -Xmx7G -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=40 -XX:G1MaxNewSizePercent=50 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=15 -XX:InitiatingHeapOccupancyPercent=20 -jar /home/minecraft/minecraft_server/forge-1.12.2-14.23.5.2838-universal.jar nogui
