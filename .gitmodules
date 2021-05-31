@@ -1,0 +1,3 @@
+[submodule "packages/serverboi/faasd"]
+	path = packages/serverboi/faasd
+	url = https://github.com/openfaas/faasd
