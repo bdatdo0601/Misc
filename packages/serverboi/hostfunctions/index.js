@@ -1,17 +1,12 @@
 const express = require('express')
-const bodyParser = require('body-parser');
-const url = require('url');
-const querystring = require('querystring');
 const WOL = require("./wol");
 const app = express()
 const port = 3000
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
-app.get('/', async (req, res) => {
-	const { macAddress } = req.query;
-	if (!macAddress) {
+app.post('/wol', async (req, res) => {
+	const macAddress = req.body;
+	if (!macAddress || req.headers["content-type"] !== "text/plain") {
 		res.status(400).send("Invalid Mac Address");
 		return;
 	}
@@ -25,5 +20,5 @@ app.get('/', async (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`WOL Boi app listening at http://localhost:${port}`)
 })

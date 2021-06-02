@@ -1,0 +1,14 @@
+[Unit]
+Description=Native Functions run on Host
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=bdatdo0601
+ExecStart=/snap/bin/node /home/bdatdo0601/Misc/packages/serverboi/hostfunctions/index.js
+
+[Install]
+WantedBy=multi-user.target
